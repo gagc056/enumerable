@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# Return character is CR+LF on Windows
-
 require './enumerable'
 a = ([1, 2, 'b', 'c'].each_with_index { |n, e| puts n, e }).to_s
 puts a
