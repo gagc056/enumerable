@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require './enumerable'
-puts ([1, 2, 'b', 'c'].my_each_with_index { |n, e| puts n, e }).to_s
+puts([1, 2, 'b', 'c'].my_each_with_index { |n, e| puts n, e }).to_s
 
 puts(%w[ant bear cat].my_all? { |word| word.length >= 3 }).to_s
 puts(%w[ant bear cat].my_all? { |word| word.length >= 4 }).to_s
@@ -32,9 +32,9 @@ puts(arr.my_count { |x| (x % 2).zero? }).to_s
 
 puts([1, 2, 3].my_map { |n| n * 2 }).to_s
 
-puts (5..10).reduce(:+)
+puts((5..10).reduce(:+)).to_s
 puts((5..10).my_inject { |sum, n| sum + n }).to_s
-puts (5..10).reduce(1, :*)
+puts((5..10).reduce(1, :*)).to_s
 puts((5..10).my_inject(1) { |product, n| product * n }).to_s
 
 longest = %w[cat sheep bear].my_inject do |memo, word|
